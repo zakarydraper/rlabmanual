@@ -1,0 +1,8 @@
+book_filename: "lab-manual"
+language:
+  ui:
+    chapter_name: "Lab "
+delete_merged_file: true
+new_session: yes
+edit: https://https://github.com/zakarydraper/zakarydraper.github.io/tree/master/lab/%s
+output_dir: "../../../zakarydraper.github.io/lab"
