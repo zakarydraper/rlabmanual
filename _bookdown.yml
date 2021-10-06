@@ -5,4 +5,4 @@ language:
 delete_merged_file: true
 new_session: yes
 edit: https://https://github.com/zakarydraper/zakarydraper.github.io/tree/master/lab/%s
-output_dir: "../../../zakarydraper.github.io/lab"
+output_dir: "_book"
