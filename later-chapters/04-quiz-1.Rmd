@@ -1,1 +1,22 @@
 # Quiz 1 {#quiz1}
+
+## Summary
+
+Lab 4 is a quiz that covers all the content in labs 1--3. It is an applied quiz. There will be no multiple choice or short answer questions. Instead, you will be given tasks to accomplish using R. You can expect that accomplishing these tasks will require you to be familiar with many (if not all) of the following:
+
+* Importing data.
+* Converting variables to factors.
+* Installing and loading R packages.
+* Basic mathematical operations.
+* Constructing data frames.
+* Adding columns to data frames.
+* Changing the values of a column in a data frame.
+* Indexing data frames and vectors (i.e., using `[]`).
+* Logical expressions.
+* Producing plots in `ggplot2`.
+
+Completing the quiz may also require that you use functions or techniques that have not been covered directly in the lab thus far. However, whenever this is the case, you will be given direction on what you need to look for.
+
+## Practice Quizzes
+
+Practice quizzes will be shared on Canvas.
