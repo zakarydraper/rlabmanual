@@ -5,3 +5,5 @@ _publish.R
 _book
 _bookdown_files
 rsconnect
+later-chapters
+lab-manual.rds
