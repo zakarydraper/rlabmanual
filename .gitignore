@@ -1,3 +1,4 @@
+.md
 .Rproj.user
 .Rhistory
 .RData
@@ -6,4 +7,7 @@ _book
 _bookdown_files
 rsconnect
 later-chapters
+assets/fonts
 lab-manual.rds
+_build.sh
+!README.md

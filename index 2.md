@@ -1,7 +1,7 @@
 --- 
 title: "Statistics Labs for Psychology"
 author: "Zakary A. Draper"
-date: "`r Sys.Date()`"
+date: "2023-03-09"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: ["book.bib", "packages.bib"]
@@ -11,12 +11,7 @@ link-citations: yes
 description: "This is a lab manual for learning statistics with R using examples of hypothetical psych science studies."
 ---
 
-```{r setup, include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+
 
 # Introduction {-}
 

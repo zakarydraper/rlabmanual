@@ -17,4 +17,6 @@ StripTrailingWhitespace: Yes
 
 BuildType: Website
 
+MarkdownReferences: Document
+
 SpellingDictionary: en_CA
