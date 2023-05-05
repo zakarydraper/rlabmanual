@@ -11,3 +11,4 @@ later-chapters
 lab-manual.rds
 _build.sh
 !README.md
+.Rproj.user

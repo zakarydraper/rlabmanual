@@ -11,71 +11,467 @@ After completing this lab, you should be able to do the following using R:
 Additionally, you should be able to do the following:
 
 * Report the results of ANOVAs with pairwise comparisons or planned contrasts in APA style.
-* Interpret the results of the aformentioned tests.
+* Interpret the results of the aforementioned tests.
 
-## The Study: Emoji and Emotion {#anova-study}
+## The Study: Cognitive Processing and Substance Use {#aov-study}
 
-Emoji are pictographs representing a wide range of facial expressions, symbols, and objects, and are administered by the Unicode Consortium [@emojilist]. As of November 2019 [@emojilist], there are 1719 standard emoji currently in use. While the first emoji were developed in 1999, they have become increasingly common and influential since 2010 when Apple began supporting emoji on iPhone software [@bai2019; @novak2015]. Emoji are frequently used across a variety of online platforms, and although they originated in Japan, they are currently used worldwide [@bai2019; @ljubesic2016]. In fact, the "face with tears of joy" emoji was even selected as the Oxford Dictionaries Word of the Year in 2015 [@wang2015].
+### Study Information
 
-### Emoji in Computer-Mediated Communication {-}
+#### Description
 
-Much of the research on emoji has focused on their functions within computer-mediated communication (CMC) [@bai2019]. One of the core limitations of using CMC for interpersonal relationship development and maintenance is that it precludes many of the non-verbal cues available in face-to-face interactions (such as facial expression and body language). At the same time, social information processing theory (SIP) suggests that CMC users adapt to the cues that are available in order to produce effective interpersonal communications [@walther1992; @walther2011]. One such cue is emoji, which can perform a number of important communication functions. Emoji are adept at conveying information typically communicated through facial expressions, as neural responses to emoji and their corresponding facial expressions are largely similar [@gantiva2019]. Furthermore, emoji may be particularly effective when used as a substitute for nonverbal cues in asynchronous electronic communication, when conversation partners respond after a delay rather than in real time [@alshenqeeti2016].
+Cannabis can harm adolescent development and lead to later substance use problems. Unfortunately, programs aimed at reducing cannabis use in adolescents have been largely ineffective. A more recent approach that has shown promise is to implement programs that target individuals who are at the greatest risk of using cannabis.
 
-Interview- and survey-based research has also supported the hypothesis that emoji are important for conveying emotional information in computer-mediated contexts. For example, @kelly2015 interviewed people about their use of emoji, and found that they were important for expressing emotion and maintaining relational connection during computer-mediated communication. Similarly, @cramer2016 identified several reasons people use emoji in mobile messaging, including adding emotional meaning or situational context, adjusting tone, and maintaining conversations and relationships. CMC users express themselves through emoji, using them to establish emotional tone and communicate friendly intentions (Kaye et al., 2016). Users can also express their personality through emoji, which can enhance interpersonal connections by filling in nonverbal cues typically absent from computer-mediated messages [@chairunnisa2017]. Emoji may be particularly suited for communicating positive emotions like joy, and so may contribute to maintaining and enhancing social relationships online [@riordan2017]. Finally, emoji can enable people to express ideas that they find difficult to express using words [@prada2018].
+What factors put adolescents at risk of cannabis use? One theory is the acquired preparedness model (APM). According to the APM, differences in personality affect learning. Learning then affects choices about cannabis use [@monti2001]. That is, some personality traits predispose individuals to developing more positive associations with substance use. There are several personality traits thought to be related to developing more positive associations with cannabis, including negative thinking, anxiety sensitivity, impulsivity, and sensation seeking. The scope of the current study is limited to just sensation seeking.
 
-In addition to expressing emotion, emoji can also be used to modify the emotional content expressed in the text of an electronic message. For example, they can be used to reduce ambiguity in electronic communication, such as by establishing emotional tone and lightening the mood in a message that could be interpreted as sarcastic or negative [@kaye2016]. Similarly, among Spanish WhatsApp users, emoji are used both to upgrade (intensify) and downgrade (soften) speech acts, which can include emotional content [@sampietro2019]. Additionally, @zhou2017 found that Chinese WeChat users employed emoji to both amplify and modulate the emotional content of their instant messages. Finally, @prada2018 studied motivations for using emoji; their research suggests that emoji are often used to indicate irony or sarcasm. Thus, emoji are critical to understanding the emotional content of social media posts, text messages, or other computer-mediated communication.
+Individuals high in sensation seeking have an affinity for stimulating and novel experiences. Prior research has shown that sensation seeking is associated with a greater risk for developing alcohol-related problems [@schlauch2015] and with adolescent hallucinogen use [@krank2011]. Although research into personality and cannabis use initiation is limited, the available research suggests sensation seeking is related to future cannabis use in adolescents [@pilin2022]. The current study aims to add to the evidence demonstrating this association.
 
-### The Current Study {-}
+#### Hypotheses
 
-The current study investigates the emotional content of emoji, as well as how they differ based on the categories assigned by Unicode. Unicode, the governing body that administers emoji, classifies them in eight categories: Smileys and Emotion, People and Body, Animals and Nature, Food and Drink, Travel and Places, Activities, Objects, Symbols, and Flags. We predict that emoji’s emotional content will differ based on their category. Specifically, we tested the hypothesis that…
+It is hypothesized that sensation seeking will be associated with cannabis use in adolescents. Specifically, adolescents who report more recent cannabis use will report higher average sensation seeking scores compared to those who report less recent cannabis use or no cannabis use at all.
 
-### Method {-}
+### Design Plan
 
-The sample for this study consisted of approximately 1,000,000 English tweets gathered from Twitter in November 2019. Approximately 25% of these tweets contained at least one emoji. Emotional scores for each emoji were produced by averaging the scores on the NRC Emotion Lexicon for the tweets containing that emoji. We only retained emoji that occurred at least 50 times in the sample, yielding a total of 549 emoji rated on 10 emotional dimensions.
+#### Study Design
 
-## Lab Report Instructions {#anova-assignment}
+Participant will be students in grades 8--10. They will be given class time to complete an online survey.
 
-For this lab report, you will be analyzing *real* data and testing a hypothesis that is--as of yet--untested.
+#### Sample Size Rationale
 
-Import the data file into R:
+The sample size will be based on the number of available respondents. Resource constraints limit data collection to a single school district. However, power analysis indicates that *n* = 61 participants per group would provide 95% power to detect effects of *f* = 0.25 or larger. This corresponds to a "medium" analysis of variance effect size according to Cohen [@cohen1988].
 
+#### Measures {#aov-measures}
 
-```r
-mle <- readRDS("MLE.rds")
-```
+Cannabis use will be measured using a single-item, which asks, "when was the last time you used marijuana?" Response options for this item are: 0 (*never*), 1 (*more than a year ago*), 2 (*in the past year*), 3 (*in the past month*), 4 (*in the past week*). Because power analysis indicated the need for 61 participants per group, groups with fewer than 61 participants will be collapsed into a neighbouring group. The choice of which groups to collapse will be based on the number of participants in each group. The smallest group will be collapsed into its smallest neighbour. If, after collapsing two groups there is still a group with fewer than 61 participants, that group will be collapsed into its smallest neighbour. This process will continue until all groups have at least 61 participants.
 
-This data frame contains numerical ratings of 10 emotions (anger, anticipation, disgust, fear, joy, sadness, surprise, trust, negative, and positive). It also contains a column with the category of each emoji.
+The 23-item version of the Substance Use Risk Profile Scale (SURPS) will be used to measure personality [@woicik2009]. The SURPS has subscales for measuring four personality traits that are theoretically associated with substance use risk: hopelessness, anxiety sensitivity, impulsivity, and sensation seeking. Items are measured on a 4-point Likert type scale, with response options 1 (*strongly disagree*), 2 (*somewhat disagree*), 3 (*somewhat agree*), 4 (*strongly agree*). Items 1, 4, 7, 13, 20, and 23 will be reverse-coded.
 
-Generate a hypothesis about how emoji differ in emotional content based on category. Your hypothesis should have one outcome variable that is one of the 10 emotions. It should have one categorical predictor variable with three or more levels (that is, it should include three or more of the categories of emoji). Your hypothesis should include both an omnibus prediction and specific planned contrasts.
+For the purposes of this study, only the sensation seeking subscale of the SURPS will be used. Composite scores for sensation seeking will be produced by averaging each participant's responses to items 3, 6, 9, 12, 16, and 19.
+
+<!-- Composite measures for each of the four subscales will be produced by averaging scores of the items associated with each subscale, as follows: -->
+
+<!-- * Hopelessness: the mean of items 1, 4, 7, 13, 17, 20, 23. -->
+<!-- * Anxiety sensitivity: the mean of items 8, 10, 14, 18, 21. -->
+<!-- * Impulsivity: the mean of items 2, 5, 11, 15, 22. -->
+<!-- * Sensation seeking: the mean of items 3, 6, 9, 12, 16, 19. -->
+
+#### Analytic Strategy
+
+An analysis of variance (ANOVA) will be conducted to test whether sensation seeking varies significantly with cannabis use. Consecutive contrasts will be conducted such that sensation seeking will be compared between each level of cannabis use and the subsequent level of cannabis use. That is, the following comparisons will be tested:
+
+1. more than a year ago $-$ never.
+1. more than a year ago $-$ in the past year.
+1. in the past year $-$ in the past month.
+1. in the past month $-$ in the past week.
+
+One-sided tests will be used, such that a result will be significant if sensation seeking is higher for participants who reported more recent cannabis use. To control for inflated error due to multiple testing, *p* values of these tests will be adjusted using the Holm method.
+
+## Data Collection {#aov-data}
+
+<form>
+  <p>**Cannabis Use**</p>
+  <table>
+    <tr>
+      <td>
+        <label for="can">When was the last time you used marijuana?</label>
+      </td>
+      <td>
+        <select id="can" name="can">
+          <option value="NA">(Select an Option)</option>
+          <option value="0">never</option>
+          <option value="1">more than a year ago</option>
+          <option value="2">in the past year</option>
+          <option value="3">in the past month</option>
+          <option value="4">in the past week</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  <p>**Substance Use Risk Profile Scale (SURPS)**</p>
+  <p>Indicate the extent to which you agree with the statements below.</p>
+  <table>
+    <tr>
+      <td>1</td>
+      <td>
+        <label for="surps_1">I am content</label>
+      </td>
+      <td>
+        <select id="surps_1" name="surps_1">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>
+        <label for="surps_2">I often don't think things through before I speak.</label>
+      </td>
+      <td>
+        <select id="surps_2" name="surps_2">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>
+        <label for="surps_3">I would like to skydive.</label>
+      </td>
+      <td>
+        <select id="surps_3" name="surps_3">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>
+        <label for="surps_4">I am happy.</label>
+      </td>
+      <td>
+        <select id="surps_4" name="surps_4">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>
+        <label for="surps_5">I often involve myself in situations that I later regret being involved in.</label>
+      </td>
+      <td>
+        <select id="surps_5" name="surps_5">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>
+        <label for="surps_6">I enjoy new and exciting experiences even if they are unconventional.</label>
+      </td>
+      <td>
+        <select id="surps_6" name="surps_6">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>
+        <label for="surps_7">I have faith that my future holds great promise.</label>
+      </td>
+      <td>
+        <select id="surps_7" name="surps_7">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>
+        <label for="surps_8">It's frightening to feel dizzy or faint.</label>
+      </td>
+      <td>
+        <select id="surps_8" name="surps_8">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>
+        <label for="surps_9">I like doing things that frighten me a little.</label>
+      </td>
+      <td>
+        <select id="surps_9" name="surps_9">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>
+        <label for="surps_10">It frightens me when I feel my heartbeat change.</label>
+      </td>
+      <td>
+        <select id="surps_10" name="surps_10">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>
+        <label for="surps_11">I usually act without stopping to think.</label>
+      </td>
+      <td>
+        <select id="surps_11" name="surps_11">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>
+        <label for="surps_12">I would like to learn how to drive a motorcycle.</label>
+      </td>
+      <td>
+        <select id="surps_12" name="surps_12">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>
+        <label for="surps_13">I feel proud of my accomplishments.</label>
+      </td>
+      <td>
+        <select id="surps_13" name="surps_13">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>
+        <label for="surps_14">I get scared when I'm too nervous.</label>
+      </td>
+      <td>
+        <select id="surps_14" name="surps_14">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>
+        <label for="surps_15">Generally, I am an impulsive person.</label>
+      </td>
+      <td>
+        <select id="surps_15" name="surps_15">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>
+        <label for="surps_16">I am interested in experience for its own sake even if it is illegal.</label>
+      </td>
+      <td>
+        <select id="surps_16" name="surps_16">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>
+        <label for="surps_17">I feel that I'm a failure.</label>
+      </td>
+      <td>
+        <select id="surps_17" name="surps_17">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>
+        <label for="surps_18">I get scared when I experience unusual body sensations.</label>
+      </td>
+      <td>
+        <select id="surps_18" name="surps_18">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>
+        <label for="surps_19">I would enjoy hiking long distances in wild and uninhabited territory.</label>
+      </td>
+      <td>
+        <select id="surps_19" name="surps_19">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>
+        <label for="surps_20">I feel pleasant.</label>
+      </td>
+      <td>
+        <select id="surps_20" name="surps_20">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>
+        <label for="surps_21">It scares me when I'm unable to focus on a task.</label>
+      </td>
+      <td>
+        <select id="surps_21" name="surps_21">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>
+        <label for="surps_22">I feel I have to be manipulative to get what I want.</label>
+      </td>
+      <td>
+        <select id="surps_22" name="surps_22">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>
+        <label for="surps_23">I am very enthusiastic about my future.</label>
+      </td>
+      <td>
+        <select id="surps_23" name="surps_23">
+          <option value="NA">(Select an Option)</option>
+          <option value="1">strongly disagree</option>
+          <option value="2">disagree</option>
+          <option value="3">agree</option>
+          <option value="4">strongly agree</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</form>
+
+## Lab Report Instructions {#aov-assignment}
 
 ### R Script
 
-1. Compute the *M* and *SD* of your outcome emotion for each level of your predictor variable.
-2. Conduct an ANOVA to test your hypothesis. You will need to convert the category variable to a factor. You may also need to subset your data.
-3. Conduct your planned contrasts. 
-4. Produce a figure that vizualizes the differences between categories on your outcome variable.
+Produce the following in R:
 
-### Manuscript
+1. Load the required packages: `psych`, `ggplot2`, `tidyr`, and `emmeans`.
+1. Reverse code the appropriate items of the SURPS.
+1. Use `rowMeans()` to calculate mean scores for each participant on each of the four SURPS subscales.
+1. Convert `cannabis_use` to a factor collapsing levels of with fewer than 61 participants as described in the [previous section](#aov-measures).
+1. Produce *M* and *SD* sensation seeking scores at each level of cannabis use (after collapsing the levels as needed).
+1. Use `ggplot()` to produce a boxplot with cannabis use on the x axis and sensation seeking on y axis. Use `geom_jitter()` to plot each participants' score overtop of the boxplots.
+<!-- 1. Use `pivot_longer()` to lengthen the data frame such that there is a column for subscale and another column for score on that subscale. -->
+<!-- 1. Use `ggplot()` with the lengthened data frame to produce a boxplot with cannabis use on the x axis and subscale score on the y axis. Use `geom_jitter()` to plot the data over to of the boxplot. Use `facet_wrap()` to create separate facets for each SURPS subscale. -->
+1. Conduct ANOVA and pairwise comparisons
+    a. Use `aov()` to produce a model predicting hopelessness from cannabis use.
+    a. Use `summary()` to inspect the results.
+1. Conduct planned comparisons.
+    a. Use `emmeans::emmeans()` to produce estimated marginal means. You will need to specify values for the arguments `object`, `specs`.
+    a. Use `emmeans::contrast()` to conduct the contrasts described in the analytic strategy. See `vignette(topic = "comparisons", package = "emmeans")`.
+    a. Use `emmeans::eff_size()` to produce Cohen's *d* effect sizes for the contrasts.
 
-#### Method {-}
+### Results
 
-* State your hypothesis clearly, including the groups and outcome variable you are using, your omnibus hypothesis, and your planned contrasts.
-* Briefly describe your analytic strategy. 
+Write a Results section, consistent with APA style, that includes the following:
 
-#### Results {-}
-
-Report the following in your Results section:
-
-* Number of emoji in each group included in your analysis.
-* *M* and *SD* on the outcome variable for each group.
-* Results of your ANOVA and planned contrasts.
-* Description of efforts to diagnose problems with statistical assumptions and data distributions.
-* A figure visualizing the relationship between your grouping and outcome variables.
-* The figure should display individual data points as well as a measure of central tendency (e.g., mean, median) for each group.
+* Results of the ANOVA.
+* Results of the planned comparisons.
+* The plot you produced.
 
 ### Discussion Questions
 
-* Provide a statement of support or non-support for your hypotheses (both your omnibus hypothesis and planned contrasts). Restate your findings in plain language (i.e., without reference to specific statistical tests or values).
-* Based on your analysis, are the Unicode-provided categories useful in explaining variation in emotional content of emoji? Your answer should reference both the effect size for your ANOVA and the spread of values displayed in your figure.
-* Describe one limitation of the study and how it may have influenced findings. 
-* What is an implication of your analysis for research in this field, users of emoji, or industries/products related to emoji?
+Provide short answer responses to the following prompts:
+
+* Provide a statement of support or nonsupport for your hypothesis. Refer to the results of both the omnibus ANOVA test and the planned comparisons in your response.
+* The design plan described how levels of cannabis use would be collapsed if the groups were too small to provide adequate statistical power. Do you think that collapsing levels of cannabis use was adequately justified? Why or why not? How might collapsing levels of cannabis use have affected your results?
+* Describe one limitation of this study. How could the limitation you identified be addressed in future research?
+<!-- * The cannabis use variable was measured on an ordinal scale. A different analytic strategy would be to treat cannabis use as a continuous variable and conduct correlation tests between cannabis and the different personality traits. What are the strengths and weaknesses of using correlations compared to ANOVA? -->

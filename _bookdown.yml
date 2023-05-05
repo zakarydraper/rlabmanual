@@ -4,5 +4,5 @@ language:
     chapter_name: "Lab "
 delete_merged_file: true
 new_session: yes
-edit: https://github.com/zakarydraper/rlabmanual
-output_dir: "_book"
+keep_md: false
+edit: null

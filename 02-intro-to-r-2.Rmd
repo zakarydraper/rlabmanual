@@ -18,8 +18,35 @@ After completing this lab, you should be able to do the following:
 * Read the following sections from [Learning Statistics with R](https://learningstatisticswithr.com/):
     * [4.6 Useful things to know about variables](https://learningstatisticswithr.com/book/mechanics.html#useful)
     * [4.7 Factors](https://learningstatisticswithr.com/book/mechanics.html#factors)
+* Read [A.1.1 How to Read an R Help Page](https://socviz.co/appendix.html#a-little-more-about-r) (it is just three paragraphs).
 
 ## Lab Activity
+
+### Part 1: Understanding R Documentation
+
+Answer the following questions using the documentation for `mean()`:
+
+1. What package is `mean()` in?
+1. What named arguments does `mean()` accept?
+1. Which of the named arguments are required?
+1. How are these three function calls different?
+    a. `mean(1:10)`
+    a. `mean(1:10, trim = 0)`
+    a. `mean(1:10, 0, FALSE)`
+1. What classes of object are acceptable values for `x`?
+1. How does `mean()` treat missing values in `x`?
+1. What is the class and length of the output of `mean(x)` if:
+    a. `x` is a numeric vector of length 50?
+    a. `x` is a logical vector of length 100?
+
+Why are there four different calls to `as.data.frame()` in the Usage section of its documentation?
+
+Answer the following questions using the documentation for `read.csv()`:
+
+1. Why does `?read.csv()` open the documentation for `read.table()`? 
+1. What is the difference between `read.table()`, `read.csv()`, and `read.csv2()`?
+
+### Part 2: Data Import
 
 Researchers at the Vancouver and Okanagan campuses of The University of British Columbia have conducted a survey of child sleep. The results of this survey are found in the file [child-sleep-data.csv](assets/data/child-sleep-data.csv). The table below provides names and descriptions for each variable in the data set.
 
@@ -61,13 +88,13 @@ Download [child-sleep-data.csv](assets/data/child-sleep-data.csv) and then compl
 ### Import and Inspect the Data
 
 * Import [child-sleep-data.csv](assets/data/child-sleep-data.csv) into R; assign it a meaningful name.
-* Inspect the `data.frame` using `str()`, `head()`, and `View()`.
+* Inspect the `data.frame` using `head()`, `str()`, and `View()`.
 
-### Convert Categorical Variables to Factors
+#### Convert Categorical Variables to Factors
 
 * Use `as.factor()` and `factor()` to convert any categorical variables to factors with the appropriate levels and labels.
 
-### Subsetting and Logical Expressions
+#### Subsetting and Logical Expressions
 
 Use `[]` to subset the data frame and find the answers to following questions/complete the tasks described below. You will also need to use `is.na()`, `max()`, `min()`, `mean()`, and logical expressions.
 
@@ -78,6 +105,6 @@ Use `[]` to subset the data frame and find the answers to following questions/co
 * What is the average daily sleep of children in each of the three conditions?
 * What is the participant ID of the participant(s) who reported the most sleep? The least sleep?
 
-### Participant Information
+#### Participant Information
 
 Use `table()` to identify how many, and what proportion of participants belong to each level of the three categorical variables.

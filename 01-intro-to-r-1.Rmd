@@ -38,7 +38,7 @@ Download and install the desktop version of RStudio from https://rstudio.com/pro
 
 ### Mathematical Operations
 
-Write R code to solve each of these equations:
+Write R code to solve each of these equations.
 
 1. $1/20$
 2. $\frac{1}{20 \times 20}$

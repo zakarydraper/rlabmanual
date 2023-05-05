@@ -7,6 +7,7 @@ documentclass: book
 bibliography: ["book.bib", "packages.bib"]
 csl: apa.csl
 github-repo: "zakarydraper/rlabmanual"
+url: "http://rlabmanual.com/"
 biblio-style: "apacite"
 link-citations: yes
 description: "This is a lab manual for learning statistics with R using examples of hypothetical psych science studies."
@@ -21,7 +22,7 @@ knitr::write_bib(c(
 
 # Introduction {-}
 
-This lab manual is intended as a resources for gaining experience (1) conducting statistical tests in R, (2) reporting results in APA style, and (3) interpreting those results in the context of a given study. It includes a collection of adapted psychology studies based primarily on research conducted by faculty at the University of British Columbia---Okanagan in 2021). For each study you will find a brief introduction, method, and analytic strategy, as well as instructions for producing an R script to conduct the analysis and presenting findings in a brief lab report. As a student using this manual, you can imagine yourself as joining a research team after data have been collected and prior to conducting any analyses. Your job is to conduct the analyses outlined in the analytic strategy, report the results, and interpret them.
+This lab manual is intended as a resources for gaining experience (a) conducting statistical tests in R, (b) reporting results in APA style, and (c) interpreting those results in the context of a given study. It includes a collection of adapted psychology studies based primarily on research conducted by faculty at the University of British Columbia---Okanagan (UBCO) in 2021. For each study you will find a brief introduction, method, and analytic strategy, as well as instructions for producing an R script to conduct the analysis and presenting findings in a brief lab report. As a student using this manual, you can imagine yourself as joining a research team after data have been collected and prior to conducting any analyses. Your job is to conduct the analyses outlined in the analytic strategy, report the results, and interpret them.
 
 ## License {-}
 
@@ -69,7 +70,7 @@ This same logic can be applied to reporting results in APA style, interpreting f
 
 Anything that can be done in R can be done more than one way. There is no consensus best way to accomplish any task. Rather, the best approach for a given task depends on several factors, including the goals of the project, and the values of the programmer. For example, [don't repeat yourself (DRY)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) is a basic principle of software development. But avoiding repetitive code has limited benefits for small projects, and can come at the cost of more complex, less comprehensible scripts. Sometimes it is worth it---especially for new learners---to just [copy and paste](https://en.wikipedia.org/wiki/Copy-and-paste_programming).
 
-One reason for using this lab manual is that the R scripts have been written with student learning in mind. I attempted to balance competing interests in choosing approaches for each task in R, and have revised the scripts based on what worked well and what students struggled with. The primary goal for the students R learning is that they learn to write scripts that are clean and reproducible. That is, someone with their script and the data could reproduce the results of the study by running the script from top to bottom. 
+One reason for using this lab manual is that the R scripts have been written with student learning in mind. I attempted to balance competing interests in choosing approaches for each task in R, and have revised the scripts based on what worked well and what students struggled with. The primary goal for the students' R learning is that they learn to write scripts that are clean and reproducible. That is, someone with their script and the data could reproduce the results of the study by running the script from top to bottom. 
 
 ##### Reproducibility {-}
 
@@ -83,7 +84,7 @@ Good script-writing practices are encouraged by demonstrating them. The R script
 
 As previously mentioned, there are many ways to accomplish most tasks in R. In deciding approaches for each task, I attempted to identify ways to give students the information that would be most valuable for them to learn without overwhelming them with the complexity of the material. To do so, I considered the following:
 
-* Is the approach likely to work in the future? It may be some time after the lab (potentially years later) before a student returns to an R script. Given that R is a programming language that changes over time, it is possible for some functions to become outdated in that timeframe.[^1] This means functions with a history of being both stable and well-maintained are preferable, and favours the base R functions maintained by the R Core Team.
+* Is the approach likely to work in the future? It may be some time after the lab (potentially years later) before a student returns to an R script. Given that R is a programming language that changes over time, it is possible for some functions to become outdated in that timeframe.[^1] This means functions with a history of being both stable and well-maintained are preferable, and this favours the base R functions maintained by the R Core Team.
 * How flexible is the approach? Can it be adapted to other similar uses? This principle favours R functions, such as `lm()` which is extremely flexible and can be used or extended to test almost anything under the umbrella of linear regression.
 * Is this approach popular in the R community? Popular approaches are valuable to learn because students are likely to encounter them outside the lab, for example in online tutorials, in R scripts shared by researchers, and when collaborating with other researchers.
 * How easy is the approach to learn? Ease-of-use is essential to usefulness. It is easier for the students to be excited and engaged when the content is challenging without being overwhelming. The lab manual is aimed at teaching psychology students. In my subjective experience, most people do not go into psychology because they want to do statistics or programming. The lab is often their first forray into computer programming. Keeping the content simple without sacrificing usefulness can help engage students who would otherwise be overwhelmed and give up. It is my hope that the students will learn to enjoy using R and use it for their research in the future. If the approaches they learn are too complicated, they will not consider the value that R can bring worth the effort.
@@ -97,11 +98,11 @@ One of the goals of the lab manual is to introduce students to a variety of diff
 
 #### You Can Make it Your Own {-}
 
-Although students everywhere can benefit from being introduced to a diversity of research programs, the lab manual being based off research conducted at UBCO is most beneficial to students at UBCO. To give those some benefits to students where you teach, you may be interested in adapting the content to reflect the research conducted at your institution. Or, you may wish to make other changes to the lab manual. If that is the case, I have good news. The license under which the lab manual is published ([CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1)) allows for sharing and adapting the content. The source code for this website is available on GitHub. You are more than welcome to download the source code, adapt it as you see fit, and use the adapted version for your lab.
+Although students everywhere can benefit from being introduced to a diversity of research programs, the lab manual being based off research conducted at UBCO is most beneficial to students at UBCO. To give those same benefits to students where you teach, you may be interested in adapting the content to reflect the research conducted at your institution. Or, you may wish to make other changes to the lab manual. If that is the case, I have good news. The license under which the lab manual is published ([CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1)) allows for sharing and adapting the content. The source code for this website is available on GitHub. You are more than welcome to download the source code, adapt it as you see fit, and use the adapted version for your lab.
 
-If you are interested in adapting the lab manual, I would also encourage you [contact me](mailto:zakary.draper@ubc.ca) so that I can provide you with the instructor resources that I use with the lab. This includes R scripts for simulating data for each of the example studies. These scripts are easily adaptable to simulate data based on any the statistical models covered in the lab.
+If you are interested in adapting the lab manual, I would also encourage you to [contact me](mailto:zakary.draper@ubc.ca) so that I can provide you with the instructor resources that I use with the lab. This includes R scripts for simulating data for each of the example studies. These scripts are easily adaptable to simulate data based on any the statistical models covered in the lab.
 
-Should you wish to adapt the lab manual but doing so is beyond your current skillset, then you are welcome to [send me an email](mailto:zakary.draper@ubc.ca) and I may be able to assist you.
+Should you wish to adapt the lab manual, but doing so is beyond your current skillset, then you are welcome to [send me an email](mailto:zakary.draper@ubc.ca) and I may be able to assist you.
 
 ## Instructor Materials {-}
 
